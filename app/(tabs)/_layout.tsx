@@ -24,14 +24,33 @@ export default function TabLayout() {
             <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
           ),
         }} />
-      <Tabs.Screen 
-        name="Account" 
-        options={{ 
-            title: 'Account',
-            tabBarIcon: ({ color, focused }) => (
-                <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
+      
+      <Tabs.Screen
+        name="WorkOut"
+        options={{
+            title: "WorkOut",
+            tabBarIcon: ({color, focused}) => (
+                <Ionicons name = {focused ? 'pizza-sharp' : 'pizza-outline'} color={color} size={24} />
             ),
-      }} />
+        }}/>
+        <Tabs.Screen
+            name = "Food"
+            options = {{
+                title: "Food",
+                tabBarIcon: ({color, focused}) => (
+                    <Ionicons name = {focused? 'pizza-outline' : 'pizza-sharp'} color = {color} size = {24} />
+                )
+        }} />
+
+        <Tabs.Screen 
+            name="Account" 
+            options={{ 
+                title: 'Account',
+                tabBarIcon: ({ color, focused }) => (
+                    <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
+                ),
+        }} />
+
     </Tabs>
   );
 }

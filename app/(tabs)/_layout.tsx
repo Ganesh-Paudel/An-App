@@ -6,13 +6,11 @@ export default function TabLayout() {
     <Tabs
         screenOptions={{
             tabBarActiveTintColor: '#ffd33d',
-            headerStyle: {
-                backgroundColor: '#25292e',
-            },
+            headerShown: false,
             headerShadowVisible: false,
             headerTintColor: '#fff',
             tabBarStyle: {
-                backgroundColor: '#25292e',
+                backgroundColor: '#7d3fa3ff',
             },
         }} 
     >
@@ -21,7 +19,7 @@ export default function TabLayout() {
         options={{ 
             title: 'Home',
             tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
+            <Ionicons name={focused ? 'home-sharp' : 'home'} color={color} size={24} />
           ),
         }} />
       
@@ -30,7 +28,7 @@ export default function TabLayout() {
         options={{
             title: "WorkOut",
             tabBarIcon: ({color, focused}) => (
-                <Ionicons name = {focused ? 'pizza-sharp' : 'pizza-outline'} color={color} size={24} />
+                <Ionicons name = {focused ? 'pizza-outline' : 'pizza-sharp'} color={color} size={24} />
             ),
         }}/>
         <Tabs.Screen
